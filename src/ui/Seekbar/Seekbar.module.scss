@@ -1,0 +1,48 @@
+$transitionDuration: 0.2s;
+
+.root {
+  position: relative;
+  cursor: pointer;
+}
+
+.background {
+  position: relative;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  height: 6px;
+}
+
+.progress,
+.buffering {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  height: 100%;
+}
+
+.progress {
+  transition: width $transitionDuration ease;
+  background: #7451fe;
+}
+
+.buffering {
+  transition: width $transitionDuration ease;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.scrubber {
+  position: absolute;
+  top: -9px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity $transitionDuration ease, left $transitionDuration ease;
+  border-radius: 50%;
+  background: #7451fe;
+  width: 24px;
+  height: 24px;
+
+  &Hover {
+    opacity: 1;
+  }
+}

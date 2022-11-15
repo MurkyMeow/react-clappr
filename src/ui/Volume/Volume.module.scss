@@ -1,0 +1,59 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  width: 35px;
+  height: 32px;
+}
+
+.root {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 12px 13px;
+  height: 184px;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: hsla(0, 0%, 100%, 0.3);
+  padding-top: 24px;
+  width: 6px;
+  height: 100%;
+}
+
+.barValue {
+  border-radius: 6px;
+  background: #7451fe;
+  width: 100%;
+}
+
+.scrubber {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s;
+
+  &:hover,
+  &Dragging {
+    transform: scale(1.2);
+  }
+
+  &::after {
+    position: absolute;
+    top: -24px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #7451fe;
+    width: 24px;
+    height: 24px;
+    content: '';
+  }
+}

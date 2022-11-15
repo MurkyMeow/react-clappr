@@ -1,0 +1,117 @@
+.root {
+  box-sizing: border-box;
+  margin: 0;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background: #171519;
+  padding: 24px 0 10px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+
+  li {
+    display: block;
+  }
+}
+
+.isDesktop {
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0 20px;
+  width: 280px;
+
+  .btn {
+    border-radius: 6px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .backBtn {
+    border-radius: 0;
+    padding-left: 0;
+
+    &:hover {
+      background: initial;
+    }
+  }
+}
+.isDesktop:not(.isSelecting) {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 350px;
+
+  .btn {
+    padding: 21.5px 10px;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 21.5px 20px;
+  width: 100%;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+
+  &:hover {
+    background: #110e14;
+  }
+  &:active {
+    background: #0c090e;
+  }
+
+  .arrowIcon {
+    flex-shrink: 0;
+  }
+}
+
+.selection {
+  opacity: 0.6;
+  margin-left: auto;
+  padding: 0 18px;
+}
+
+.backBtn {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  .arrowIcon {
+    transform: scaleX(-1);
+    margin-right: 23px;
+    margin-left: 0;
+  }
+}
+
+.cancelBtn {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.options {
+  margin: 0;
+  padding: 10px 0;
+  list-style-type: none;
+}
+
+.optionBtn {
+  padding: 12.5px 0;
+  color: rgba(255, 255, 255, 0.6);
+
+  &.isActive {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  &:not(&.isActive) .checkIcon {
+    opacity: 0;
+  }
+}
+
+.checkIcon {
+  margin-right: 10px;
+  margin-left: 20px;
+}
